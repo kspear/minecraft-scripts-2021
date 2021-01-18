@@ -1,6 +1,6 @@
 -- require_remote.lua
 
-function get_library(url, filename)
+function getLibrary(url, filename)
   local content = http.get(library_file)
   output = fs.open(filename, "w")
   
@@ -8,3 +8,5 @@ function get_library(url, filename)
   output.close()
   return require(filename)
 end
+
+return getLibrary
