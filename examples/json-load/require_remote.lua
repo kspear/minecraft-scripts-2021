@@ -1,4 +1,4 @@
--- init.lua
+-- require_remote.lua
 
 function get_library(url, filename)
   local content = http.get(library_file)
