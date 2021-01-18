@@ -1,12 +1,12 @@
 -- require_remote.lua
 
-function getLibrary(url, filename)
+function getLibrary(url, name)
   local content = http.get(url)
-  output = fs.open(filename, "w")
+  output = fs.open(name .. ".lua", "w")
   
   output.write(content.readAll())
   output.close()
-  return require(filename)
+  return require(name)
 end
 
 return getLibrary
